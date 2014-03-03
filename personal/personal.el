@@ -1,3 +1,6 @@
+;; Start shell or switch to it if it's active.
+(global-set-key (kbd "C-x m") 'shell)
+
 ;; Vim key mappings
 (evil-mode 1)
 ;; Hold Ctrl while in insert mode to change "hjkl" back to directional keys.
