@@ -4,10 +4,10 @@
 ;; Vim key mappings
 (evil-mode 1)
 ;; Hold Ctrl while in insert mode to change "hjkl" back to directional keys.
-(define-key evil-insert-state-map (kbd "C-h") 'backward-char)
-(define-key evil-insert-state-map (kbd "C-l") 'forward-char)
-(define-key evil-insert-state-map (kbd "C-j") 'next-line)
-(define-key evil-insert-state-map (kbd "C-k") 'previous-line)
+(define-key evil-insert-state-map (kbd "C-h") 'evil-backward-char)
+(define-key evil-insert-state-map (kbd "C-l") 'evil-forward-char)
+(define-key evil-insert-state-map (kbd "C-j") 'evil-next-line)
+(define-key evil-insert-state-map (kbd "C-k") 'evil-previous-line)
 (define-key evil-insert-state-map "\t" 'evil-shift-right-line)
 (define-key evil-insert-state-map [backtab] 'evil-shift-left-line)
 
