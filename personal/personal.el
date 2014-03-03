@@ -12,7 +12,9 @@
 (define-key evil-insert-state-map [backtab] 'evil-shift-left-line)
 
 ;;Line length to 120
-(setq whitespace-line-column 120) ;; limit line length
+(setq-default fill-column 120)
+;; Show when lines exceed fill column
+(setq whitespace-line-column 120)
 
 ;; Show line numbers
 (require 'nlinum)
