@@ -28,3 +28,6 @@
 
 ;; Make org mode look nicer
 (setq org-startup-indented t)
+
+;; Make RET automagically place and indent braces, parens, etc.
+(global-set-key (kbd "RET") 'new-line-dwim)
