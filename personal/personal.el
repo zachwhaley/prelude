@@ -14,6 +14,9 @@
 (define-key evil-insert-state-map "\t" 'evil-shift-right-line)
 (define-key evil-insert-state-map [backtab] 'evil-shift-left-line)
 
+;; Use Ctrl-j to return a line while not in insert mode
+(define-key evil-normal-state-map (kbd "C-j") 'evil-ret-and-indent)
+
 ;;Line length to 120
 (setq-default fill-column 120)
 ;; Show when lines exceed fill column
