@@ -29,9 +29,6 @@
 ;; Make org mode look nicer
 (setq org-startup-indented t)
 
-;; Make RET automagically place and indent braces, parens, etc.
-(global-set-key (kbd "RET") 'new-line-dwim)
-
 ;; Terminator style window splitting
 (global-set-key (kbd "C-S-o") 'split-window-below)
 (global-set-key (kbd "C-S-e") 'split-window-right)
