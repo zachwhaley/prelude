@@ -1,6 +1,9 @@
-;; Start shell or switch to it if it's active.
-(global-set-key (kbd "C-x m") 'shell)
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 
+(require 'evil-states)
+(require 'evil-commands)
 ;; Vim key mappings
 (evil-mode 1)
 ;; Hold Ctrl while in insert mode to change "hjkl" back to directional keys.
@@ -14,7 +17,7 @@
 ;;Line length to 120
 (setq-default fill-column 120)
 ;; Show when lines exceed fill column
-(setq whitespace-line-column 120)
+(defvar whitespace-line-column 120)
 
 ;; Show line numbers
 (require 'nlinum)
@@ -24,10 +27,10 @@
 (require 'dirtree)
 
 ;; Enable Projectile caching to prevent additional reindexing
-(setq project-enable-caching t)
+(defvar project-enable-caching t)
 
 ;; Make org mode look nicer
-(setq org-startup-indented t)
+(defvar org-startup-indented t)
 
 ;; Terminator style window splitting
 (global-set-key (kbd "C-S-o") 'split-window-below)
