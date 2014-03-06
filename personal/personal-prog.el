@@ -4,9 +4,20 @@
 
 ;; Smartparens magic!
 (require 'smartparens)
+;; Add some custom pairs
+;; Block comments
+(sp-local-pair 'c-mode "/*" "*/" :actions '(insert))
+(sp-local-pair 'c++-mode "/*" "*/" :actions '(insert))
+(sp-local-pair 'java-mode "/*" "*/" :actions '(insert))
+
 ;; After a curly brace and a return create a newline for the closing curly
 ;; brace, move the cursor back up, and indent according to mode.
 (sp-local-pair 'c++-mode "{" nil :post-handlers '(("||\n[i]" "RET")))
+(sp-local-pair 'java-mode "{" nil :post-handlers '(("||\n[i]" "RET")))
+;; Fancify block comments in C/C++ and Java
+(sp-local-pair 'c-mode "/*" "*/" :post-handlers '(("* ||[i]\n[i]" "RET")))
+(sp-local-pair 'c++-mode "/*" "*/" :post-handlers '(("* ||[i]\n[i]" "RET")))
+(sp-local-pair 'java-mode "/*" "*/" :post-handlers '(("* ||[i]\n[i]" "RET")))
 
 (defun personal-prog-mode-defaults ()
   "Personal default coding hook."
