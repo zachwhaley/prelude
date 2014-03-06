@@ -2,30 +2,20 @@
 ;;; Commentary:
 ;;; Code:
 
-(defun new-line-dwim ()
-  "Make smartparens-mode better.
-Pressing return after creating an opening and closing paren via
-smartparens-mode will place your cursor one line down and indent it while
-placing the closing paren one more line down and at the same column as it's
-statement."
-  (interactive)
-  (let ((break-open-pair (or (and (looking-back "{") (looking-at "}"))
-                             (and (looking-back ">") (looking-at "<"))
-                             (and (looking-back "(") (looking-at ")"))
-                             (and (looking-back "\\[") (looking-at "\\]")))))
-    (newline)
-    (when break-open-pair
-      (save-excursion
-        (newline)
-        (indent-for-tab-command)))
-    (indent-for-tab-command)))
+;; Smartparens magic!
+(require 'smartparens)
+;; After a curly brace and a return create a newline for the closing curly
+;; brace, move the cursor back up, and indent according to mode.
+(sp-local-pair 'c++-mode "{" nil :post-handlers '(("||\n[i]" "RET")))
 
-(defun programming-keys ()
-  "Add custom key mappings when editing programming languages."
-  (local-set-key (kbd "RET") 'new-line-dwim))
+(defun personal-prog-mode-defaults ()
+  "Personal default coding hook."
+  ;; For God's sake indent when I press return.
+  (electric-indent-mode +1))
 
-(add-hook 'c-mode-hook 'programming-keys)
-(add-hook 'java-mode-hook 'programming-keys)
+(defvar personal-prog-mode-hook 'personal-prog-mode-defaults)
+(add-hook 'prog-mode-hook (lambda ()
+                            (run-hooks 'personal-prog-mode-hook)))
 
-(provide 'programming)
-;;; programming.el ends here
+(provide 'personal-prog)
+;;; personal-prog.el ends here
