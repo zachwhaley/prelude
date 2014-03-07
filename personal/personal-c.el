@@ -7,15 +7,16 @@
 
 ;; Add some custom pairs
 ;; Block comments
-(sp-local-pair 'c-mode-common "/*" "*/" :actions '(insert))
+(sp-local-pair '(c-mode c++-mode java-mode) "/*" "*/" :actions '(insert))
 
 ;; After a curly brace and a return create a newline for the closing curly
 ;; brace, move the cursor back up, and indent according to mode.
-(sp-local-pair 'c-mode-common "{" nil :post-handlers '(("||\n[i]" "RET")))
+(sp-local-pair '(c-mode c++-mode java-mode) "{" nil
+               :post-handlers '(:add ("||\n[i]" "RET")))
 
 ;; Fancify block comments in C/C++ and Java
-(sp-local-pair 'c-mode-common "/*" nil :post-handlers '(("* ||[i]\n[i]" "RET")))
-(sp-local-pair 'c-mode-common "/*" nil :post-handlers '((" |" "SPC")) t)
+(sp-local-pair '(c-mode c++-mode java-mode) "/*" nil
+               :post-handlers '(" | " ("* ||[i]\n[i]" "RET")))
 
 (provide 'personal-c)
 ;;; personal-c.el ends here
