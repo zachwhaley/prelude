@@ -3,7 +3,8 @@
 ;;; Code:
 
 ;; Show when lines exceed fill column
-(defvar whitespace-line-column 120)
+(require 'whitespace)
+(setq whitespace-line-column 120)
 
 ;; Show line numbers
 (require 'nlinum)
