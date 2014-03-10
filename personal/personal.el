@@ -20,6 +20,9 @@
 ;; C-SPC is easier than M-/
 (global-set-key (kbd "C-SPC") 'hippie-expand)
 
+;; Enable Projectile
+(projectile-global-mode)
+
 ;; Set custom ujelly theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/ujelly-theme")
 (load-theme 'ujelly t)
