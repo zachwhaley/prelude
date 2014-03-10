@@ -11,6 +11,7 @@
   ;; For God's sake indent when I press return.
   (electric-indent-mode +1)
   (yas-minor-mode)
+  (auto-complete-mode)
   ;; Turn off spell checking while coding; It's annoying.
   (flyspell-mode -1))
 
