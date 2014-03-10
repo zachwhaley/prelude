@@ -10,7 +10,9 @@
   "Personal default coding hook."
   ;; For God's sake indent when I press return.
   (electric-indent-mode +1)
-  (yas-minor-mode))
+  (yas-minor-mode)
+  ;; Turn off spell checking while coding; It's annoying.
+  (flyspell-mode -1))
 
 (add-hook 'prelude-prog-mode-hook 'personal-prog-mode-defaults t)
 
