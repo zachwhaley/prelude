@@ -16,5 +16,9 @@
 
 (add-hook 'prelude-prog-mode-hook 'personal-prog-mode-defaults t)
 
+(define-key yas-minor-mode-map [(tab)] nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "M-/") 'yas-expand)
+
 (provide 'personal-prog)
 ;;; personal-prog.el ends here
