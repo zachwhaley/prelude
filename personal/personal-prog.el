@@ -2,8 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
-;; YASnippet magic!
+(require 'smartparens)
 (require 'yasnippet)
+
+;; YASnippet magic!
 (yas-reload-all)
 
 (defun personal-prog-mode-defaults ()
@@ -13,7 +15,8 @@
   (yas-minor-mode)
   (auto-complete-mode)
   ;; Turn off spell checking while coding; It's annoying.
-  (flyspell-mode -1))
+  (flyspell-mode -1)
+  (setq sp-autoescape-string-quote nil))
 
 (add-hook 'prelude-prog-mode-hook 'personal-prog-mode-defaults t)
 
