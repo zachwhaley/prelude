@@ -1,3 +1,6 @@
 [submodule "ujelly-theme"]
 	path = themes/ujelly-theme
 	url = git@github.com:zachwhaley/color-theme-ujelly.git
+[submodule "themes/mejelly"]
+	path = themes/mejelly
+	url = git@github.com:Trevoke/color-theme-mejelly.git
