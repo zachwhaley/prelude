@@ -27,8 +27,8 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; Set custom ujelly theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/ujelly-theme")
-(load-theme 'ujelly t)
+ (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/ujelly-theme")
+;; (load-theme 'ujelly t)
 
 (provide 'personal)
 ;;; personal.el ends here
