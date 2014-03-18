@@ -16,7 +16,10 @@
   (auto-complete-mode)
   ;; Turn off spell checking while coding; It's annoying.
   (flyspell-mode -1)
-  (setq sp-autoescape-string-quote nil))
+  (setq sp-autoescape-string-quote nil)
+  ;; Add numbers to syntax highlighting
+  (font-lock-add-keywords nil
+                          '(("\\<\\([0-9]+\\(eE[+-]?[0-9]*\\)?\\|0[xX][0-9a-fA-F]+\\)\\>" . font-lock-constant-face))))
 
 (add-hook 'prelude-prog-mode-hook 'personal-prog-mode-defaults t)
 
