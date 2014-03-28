@@ -17,8 +17,7 @@
 (setq whitespace-line-column 120)
 
 ;; Show line numbers
-(require 'nlinum)
-(global-nlinum-mode 1)
+(global-linum-mode 1)
 
 ;; Make org mode look nicer
 (defvar org-startup-indented)
