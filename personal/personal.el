@@ -2,6 +2,16 @@
 ;;; Commentary:
 ;;; Code:
 
+;; Add these to the required packages.
+(prelude-require-packages
+ '(auto-complete
+   color-theme-solarized
+   evil
+   markdown-mode+
+   python-environment
+   jedi
+   yasnippet))
+
 ;; Show when lines exceed fill column
 (require 'whitespace)
 (setq whitespace-line-column 120)
