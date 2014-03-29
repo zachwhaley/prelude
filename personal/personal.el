@@ -5,12 +5,20 @@
 ;; Add these to the required packages.
 (prelude-require-packages
  '(auto-complete
-   color-theme-solarized
+   solarized-theme
    evil
    markdown-mode+
    python-environment
    jedi
    yasnippet))
+
+;; Load Solarized theme.
+(require 'solarized-theme)
+(load-theme 'solarized-dark t)
+;; make the fringe stand out from the background
+(setq solarized-distinct-fringe-background t)
+;; make the modeline high contrast
+(setq solarized-high-contrast-mode-line t)
 
 ;; Show when lines exceed fill column
 (require 'whitespace)
