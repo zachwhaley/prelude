@@ -5,7 +5,7 @@
 ;; Add these to the required packages.
 (prelude-require-packages
  '(auto-complete
-   solarized-theme
+   color-theme-solarized
    evil
    markdown-mode+
    python-environment
@@ -13,12 +13,8 @@
    yasnippet))
 
 ;; Load Solarized theme.
-(require 'solarized-theme)
+(disable-theme 'zenburn)
 (load-theme 'solarized-dark t)
-;; make the fringe stand out from the background
-(setq solarized-distinct-fringe-background t)
-;; make the modeline high contrast
-(setq solarized-high-contrast-mode-line t)
 
 ;; Show when lines exceed fill column
 (require 'whitespace)
