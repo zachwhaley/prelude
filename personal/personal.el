@@ -33,9 +33,6 @@
 ;; C-SPC is easier than M-/
 (global-set-key (kbd "C-SPC") 'hippie-expand)
 
-;; Enable Projectile
-(projectile-global-mode)
-
 ;; Remove whitespace on save
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
