@@ -29,6 +29,7 @@
 ;; Terminator style window splitting
 (global-set-key (kbd "C-S-o") 'split-window-below)
 (global-set-key (kbd "C-S-e") 'split-window-right)
+(global-set-key (kbd "C-S-x") 'delete-other-windows)
 
 ;; C-SPC is easier than M-/
 (global-set-key (kbd "C-SPC") 'hippie-expand)
