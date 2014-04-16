@@ -31,6 +31,8 @@
 ;; I don't use C-e to scroll and I hate pressing $ to go to the end of a line.
 (define-key evil-normal-state-map (kbd "C-e") 'evil-end-of-line)
 (define-key evil-insert-state-map (kbd "C-e") 'personal-evil-end-of-line)
+(define-key evil-visual-state-map (kbd "C-a") 'prelude-move-beginning-of-line)
+(define-key evil-visual-state-map (kbd "C-e") 'evil-end-of-visual-line)
 
 (provide 'personal-evil)
 ;;; personal-evil.el ends here
