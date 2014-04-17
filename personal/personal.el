@@ -31,9 +31,6 @@
 (global-set-key (kbd "C-S-e") 'split-window-right)
 (global-set-key (kbd "C-S-x") 'delete-other-windows)
 
-;; C-SPC is easier than M-/
-(global-set-key (kbd "C-SPC") 'hippie-expand)
-
 ;; Remove whitespace on save
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
